@@ -1,5 +1,8 @@
 #! /bin/bash
 
+# Running updates
+sudo apt-get update
+
 # Install NTFS-3G
 echo -e "---------------------------------\nINSTALLING NTFS-3G...\n---------------------------------\n"
 sudo apt-get install ntfs-3g -y
@@ -51,8 +54,8 @@ sudo smbpasswd -a $user
 
 # Configuring auto mount on restart
 echo -e "---------------------------------\nCONFIGURING AUTOMOUNT...\n---------------------------------\n"
-sudo echo "${dev1} /media/USBHDD1 auto noatime 0 0" > /etc/fstab
-sudo echo "${dev2} /media/USBHDD2 auto naotime 0 0" > /etc/fstab
+echo "${dev1} /media/USBHDD1 auto noatime 0 0" | sudo tee --append /etc/fstab
+echo "${dev2} /media/USBHDD2 auto naotime 0 0" > sudo tee --append /etc/fstab
 
 # NAS SETUP COMPLETE
 echo -e "---------------------------------\nSETUP COMPLETE!\n---------------------------------\n"
