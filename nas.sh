@@ -28,7 +28,7 @@ sudo apt-get install samba samba-common-bin -y
 
 # Fetch Pre-built SAMBA Config from repo
 echo -e "---------------------------------\nPULLING SAMBA CONFIG FROM REPO...\n---------------------------------\n"
-sudo curl -o /etc/samba/smb.conf https://github.com/kdp8791/RaspbianNAS/blob/master/smb.conf
+sudo curl -o /etc/samba/smb.conf https://raw.githubusercontent.com/kdp8791/RaspbianNAS/master/smb.conf
 
 # Restart SAMBA
 echo -e "---------------------------------\nRESTARTING SAMBA...\n---------------------------------\n"
